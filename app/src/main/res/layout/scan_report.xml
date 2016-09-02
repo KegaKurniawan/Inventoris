@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/total_item_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total item to scan           : "
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/total_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textStyle="italic"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_alignTop="@+id/total_item_desc"
+            android:layout_toRightOf="@+id/total_scan_desc"
+            android:layout_toEndOf="@+id/total_scan_desc" />
+
+        <TextView
+            android:id="@+id/total_scan_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_item_desc"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Total item already scan  : "
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/total_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textStyle="italic"
+            android:layout_alignTop="@+id/total_scan_desc"
+            android:layout_alignLeft="@+id/total_item"
+            android:layout_alignStart="@+id/total_item" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Items in the database that have not been scanned"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/tableUndone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*" >
+        <TableRow>
+            <TextView
+                android:text="No. QR Code"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+            <TextView
+                android:text="Description"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Undefined item"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#808080"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="1dp"
+        android:padding="5dp"
+        android:layout_weight="1">
+    </ListView>
+
+    <Button
+        android:id="@+id/bAddUnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add new Item"
+        />
+
+</LinearLayout>

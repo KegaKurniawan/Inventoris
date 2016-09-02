@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kegafirstapp.inventoris">
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="mainactivity">
+        </activity>
+
+        <activity
+            android:name=".ShowInventory"
+            android:label="showinventory">
+        </activity>
+
+        <activity
+            android:name=".QrCodeScan"
+            android:label="qrcodescan">
+        </activity>
+
+        <activity
+            android:name=".ReportScan"
+            android:label="reportscan">
+        </activity>
+
+        <activity
+            android:name=".EditList"
+            android:label="editlist">
+        </activity>
+
+        <activity
+            android:name=".AddNew"
+            android:label="addnew">
+        </activity>
+
+    </application>
+
+</manifest>
